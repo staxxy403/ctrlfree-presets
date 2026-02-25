@@ -12,9 +12,9 @@ env_vars:
   - key: 'BOT_TOKEN'
     label: 'токен бота'
     description: 'Бота можно создать в @BotFather'
-    default_value: null
+    regex: '^[0-9]{8,12}:[a-zA-Z0-9_-]{35,45}$'
+    regex_error: '❌ Это не токен бота!'
 
   - key: 'WELCOME_MSG'
     label: 'текст приветствия'
     description: 'Что бот ответит на команду /start'
-    default_value: 'Привет! Напиши свой вопрос, и я передам его админу.'
